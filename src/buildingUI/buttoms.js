@@ -131,7 +131,7 @@ const Buttons = () => {
             </div>
             <div className='equal'>
                 <button onClick={handleResult} className= {`equal ${animateEqual ? "colorchange" : ""}`}>=</button>
-                <button onClick={handleCleaning} className='clean'>Clear</button>
+                <button onClick={handleCleaning} className='clear'>Clear</button>
             </div>
         </div>
     );
