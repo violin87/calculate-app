@@ -58,7 +58,7 @@ const Buttons = () => {
   
 
     const handleAnswer = () => {
-        const userAnswer = answerRef.current.value; // Get value directly from ref
+        const userAnswer = answerRef.current.value; //  value directly from ref
         if (userAnswer === result) {
             setScore(prevScore => prevScore + 1);
            }
@@ -70,6 +70,12 @@ const Buttons = () => {
          setFeedback(`The answer is ${result}`)
 
         }
+
+        if(score === 10) {
+
+         setFeedback("The game is finished!! Great Job!!")
+        
+         }
 
         setAnswerForm(false);  
         console.log(userAnswer)
@@ -100,20 +106,20 @@ const Buttons = () => {
 
             <div className='buttonContainer'>
                 <button className={`button1 ${animateEqual ? "animate-diagonal-right" : ""}`} onClick={displayHandle}>1</button>
-                <button className={`button2 ${animateEqual ? "animate-diagonal-left" : ""}`} onClick={displayHandle}>2</button>
+                <button className={`button2 ${animateEqual ? "animate-vertical" : ""}`} onClick={displayHandle}>2</button>
                 <button className={`button3 ${animateEqual ? "animate-circle" : ""}`} onClick={displayHandle}>3</button>
            </div>
            <div className='secondbuttonContainer'>
                 <button className={`button4 ${animateEqual ? "animate-horizontal" : ""}`} onClick={displayHandle}>4</button>
-                <button className={`button5 ${animateEqual ? "animate-vertical" : ""}`} onClick={displayHandle}>5</button>
+                <button className={`button5 ${animateEqual ? "animate-circle" : ""}`} onClick={displayHandle}>5</button>
                 <button className={`button6 ${animateEqual ? "animate-diagonal-right" : ""}`} onClick={displayHandle}>6</button>
            </div>
 
           <div className='thirdbuttonContainer'>
                <button className={`button4 ${animateEqual ? "animate-circle" : ""}`} onClick={displayHandle}>7</button>
-               <button className={`button5 ${animateEqual ? "animate-diagonal-right" : ""}`} onClick={displayHandle}>8</button>
+               <button className={`button5 ${animateEqual ? "animate-diagonal-left" : ""}`} onClick={displayHandle}>8</button>
                <button className={`button6 ${animateEqual ? "animate-spiral" : ""}`} onClick={displayHandle}>9</button>
-               <button className={`button6 ${animateEqual ? "animate-diagonal-left" : ""}`} onClick={displayHandle}>0</button>
+               <button className={`button6 ${animateEqual ? "animate-horizontal" : ""}`} onClick={displayHandle}>0</button>
 </div>
 
 
@@ -124,7 +130,7 @@ const Buttons = () => {
                 <button  onClick={displayHandle} className='divide'>/</button>
             </div>
             <div className='equal'>
-                <button onClick={handleResult} className='equal'>=</button>
+                <button onClick={handleResult} className= {`equal ${animateEqual ? "colorchange" : ""}`}>=</button>
                 <button onClick={handleCleaning} className='clean'>Clear</button>
             </div>
         </div>
