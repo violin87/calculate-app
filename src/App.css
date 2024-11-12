@@ -46,13 +46,13 @@ button {
 
   .equal {
 
-  width: 120px;
+  width: auto;
 
   }   
 
   .clear {
 
-  width: 120px;
+  width: auto;
   }
 
 
@@ -73,7 +73,7 @@ button {
     white-space: nowrap; 
     overflow: hidden;
 }
-/* Diagonal Right */
+/* Diagonal */
 .animate-diagonal-right {
   animation: diagonalRight 2s ease-in-out infinite alternate;
 }
@@ -91,7 +91,7 @@ button {
   100% { transform: translate(-200px, 200px); }
 }
 
-/* Circular Movement */
+/* Circular */
 .animate-circle {
   animation: circle 4s linear infinite;
 }
